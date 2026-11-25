@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Printable DVIR checklist (49 CFR 396.11 items, tire depths, sign-off)</title>
+<meta name="description" content="A one-page printable driver vehicle inspection report with the items listed in 49 CFR 396.11, tire tread depth by wheel position, and driver, repair and next-driver sign-off.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3F3F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111013" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+
+<meta name="apple-itunes-app" content="app-id=6839294842">
+
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Treadwise">
+<meta property="og:title" content="Printable DVIR checklist (49 CFR 396.11 items, tire depths, sign-off)">
+<meta property="og:description" content="A one-page printable driver vehicle inspection report with the items listed in 49 CFR 396.11, tire tread depth by wheel position, and driver, repair and next-driver sign-off.">
+
+<link rel="canonical" href="https://jerryjrdev.github.io/tiretreadscanner/dvir-checklist.html">
+<meta property="og:url" content="https://jerryjrdev.github.io/tiretreadscanner/dvir-checklist.html">
+<meta property="og:image" content="https://jerryjrdev.github.io/tiretreadscanner/assets/app-icon-1024.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/app-icon-1024.png">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body class="print-only-sheet">
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Band patterns (DIRECTION.md §3): Watch fine 45° hatch, Replace soon bold 135° stripes. -->
+    <pattern id="p-watch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" style="fill:var(--watch-fill)"/>
+      <rect width="1.6" height="6" style="fill:var(--watch-on);opacity:.3"/>
+    </pattern>
+    <pattern id="p-replace" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(135)">
+      <rect width="11" height="11" style="fill:var(--replace-fill)"/>
+      <rect width="4.5" height="11" fill="#FFFFFF" opacity=".3"/>
+    </pattern>
+    <pattern id="p-watch-slab" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#FFBF2E"/>
+      <rect width="1.6" height="6" fill="#1C1300" opacity=".3"/>
+    </pattern>
+
+    <!-- Band icons: circle, triangle, octagon, clock (ANSI sign shapes). --knock is the cut-out colour. -->
+    <symbol id="i-good" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M7.3 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24"><path d="M10.3 3.2a2 2 0 0 1 3.4 0l9 15.6a2 2 0 0 1-1.7 3H3a2 2 0 0 1-1.7-3z" fill="currentColor"/><path d="M12 8.6v5.6" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.9" r="1.5" fill="var(--knock, #fff)"/></symbol>
+    <symbol id="i-replace" viewBox="0 0 24 24"><path d="M8 1.5h8l6.5 6.5v8L16 22.5H8L1.5 16V8z" fill="currentColor"/><path d="M8.4 8.4l7.2 7.2M15.6 8.4l-7.2 7.2" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-stale" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 6.8V12l3.6 2.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <!-- Line icons, 24 grid, 2 px stroke (set by .icon). -->
+    <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="1.8" y="7.5" width="20.4" height="9" rx="2"/><path d="M5.5 7.5v3.2M8.8 7.5v2M12 7.5v3.2M15.2 7.5v2M18.5 7.5v3.2"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 3.5h12.5a1.5 1.5 0 0 1 1.5 1.5v14.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5H19M9 7.5h6"/></symbol>
+    <symbol id="i-depth" viewBox="0 0 24 24"><rect x="6" y="1.8" width="12" height="20.4" rx="2.6"/><circle cx="10" cy="5" r=".5" fill="currentColor"/><circle cx="12" cy="5" r=".5" fill="currentColor"/><circle cx="14" cy="5" r=".5" fill="currentColor"/><path d="M9 14.5q3 2.5 6 0M9 11.5q3 2.5 6 0" /></symbol>
+    <symbol id="i-lidar" viewBox="0 0 24 24"><rect x="5" y="1.8" width="14" height="20.4" rx="2.6"/><rect x="7.5" y="4.3" width="8" height="8" rx="2"/><circle cx="10" cy="6.8" r="1.1"/><circle cx="10" cy="9.9" r="1.1"/><circle cx="13.2" cy="8.3" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M15 9.2a3.6 3.6 0 1 0 0 5.6M12.6 6.6v10.8"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 15.5v-3.2l2-5A2 2 0 0 1 6.9 6h10.2a2 2 0 0 1 1.9 1.3l2 5v3.2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zM3.5 12h17"/><path d="M5.5 16.5v2M18.5 16.5v2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1.8 5.5h11v10.5h-11zM12.8 9h4.6l3.8 3.8V16h-8.4"/><circle cx="6" cy="17.6" r="2"/><circle cx="17" cy="17.6" r="2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><rect x="3" y="2.5" width="4.5" height="7" rx="1.2"/><rect x="16.5" y="2.5" width="4.5" height="7" rx="1.2"/><rect x="3" y="14.5" width="4.5" height="7" rx="1.2"/><rect x="16.5" y="14.5" width="4.5" height="7" rx="1.2"/><path d="M7.5 6h9M7.5 18h9M12 6v12"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v13a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 20V4A1.5 1.5 0 0 1 6 2.5z"/><path d="M14 2.5V7h4.5M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24"><path d="M3 14.5c2-4 3.5-7 5-7 2.2 0-1.8 9 1 9 1.8 0 2.5-3 4-3 1.2 0 1 2 2.5 2 1 0 2-1 3-2"/><path d="M3 20.5h18"/></symbol>
+    <symbol id="i-leak" viewBox="0 0 24 24"><path d="M12 2.5s-6.5 7.2-6.5 11.8a6.5 6.5 0 0 0 13 0C18.5 9.7 12 2.5 12 2.5z"/><path d="M12 10v4.2"/><circle cx="12" cy="17.2" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><path d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path d="M8.2 12.2l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M6.5 8l4 2.5 3.5-1 5 6"/><path d="M6.5 17h14" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15zM10 21h4"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7.5h3.5L8.3 5h7.4l1.8 2.5H21a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.2" r="3.8"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 19.5h10.5a4.5 4.5 0 0 0 .6-9 6 6 0 0 0-11.6 1.4A3.8 3.8 0 0 0 7 19.5z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="11" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-noperson" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0M3 3l18 18"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3.5 6h17M9 6V3.8h6V6M6 6l1 15h10l1-15M10 10.5v6.5M14 10.5v6.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.8 4.8L19.5 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4.5v15M4.5 12h15"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M6.5 9V2.5h11V9M6.5 17.5H4a1.5 1.5 0 0 1-1.5-1.5v-5.5A1.5 1.5 0 0 1 4 9h16a1.5 1.5 0 0 1 1.5 1.5V16a1.5 1.5 0 0 1-1.5 1.5h-2.5"/><path d="M6.5 14h11v7.5h-11z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 4.5l7.5 7.5L9 19.5"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9.5h3.5L11 5.5v13l-4.5-4H3z"/><path d="M14.5 9a4 4 0 0 1 0 6M17.5 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></symbol>
+    <symbol id="i-tread" viewBox="0 0 34 14"><path d="M4 0h9L9 14H0zM16 0h9l-4 14h-9zM28 0h6v0L30 14h-6z" fill="currentColor" stroke="none"/></symbol>
+  </defs>
+</svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="Treadwise home">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#2A22D9"/>
+        <path d="M6 64V34q0-6 6-6h6v10a4 4 0 0 0 8 0V28h12v10a4 4 0 0 0 8 0V28h6q6 0 6 6v30z" fill="#1E1D22"/>
+        <g fill="none" stroke="#F4F3F1" stroke-width="2.6"><path d="M7.3 35v-1q0-4.7 4.7-4.7h6M26 29.3h12M46 29.3h6q4.7 0 4.7 4.7v1"/></g>
+        <g stroke="#F4F3F1" stroke-linecap="round"><path d="M37 16.5h10" stroke-width="3.4"/><path d="M42 17v20" stroke-width="2.6"/></g>
+        <circle cx="42" cy="38.2" r="3.1" fill="#F4F3F1"/>
+      </svg>
+      <span>Treadwise</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#guides">Guides</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>DVIR checklist</h1>
+      <p class="lede">A one-page driver vehicle inspection report with the items listed in 49 CFR 396.11, tread depth for every wheel position, and sign-off for the driver, the repair and the next driver.</p>
+    </header>
+    <div class="article-grid">
+      <article class="prose" style="max-width:none">
+        <div class="sheet-tools no-print">
+          <button type="button" class="btn btn-primary" data-print hidden><svg class="icon" aria-hidden="true"><use href="#i-print"/></svg>Print checklist</button>
+          <span class="small muted">Fits one US Letter page. Use your browser's print command if the button doesn't appear.</span>
+        </div>
+
+        <section class="sheet" aria-labelledby="sheet-title">
+          <h2 id="sheet-title">Driver vehicle inspection report</h2>
+          <p class="sub">Items listed in 49 CFR 396.11. Mark each item OK, Defect or N/A, and describe every defect in Notes.</p>
+          <div class="sheet-fields">
+            <div class="blank wide"><i></i><span>Carrier or company</span></div>
+            <div class="blank"><i></i><span>Unit number</span></div>
+            <div class="blank"><i></i><span>Trailer number(s)</span></div>
+            <div class="blank"><i></i><span>Odometer or hours</span></div>
+            <div class="blank"><i></i><span>Date</span></div>
+            <div class="blank"><i></i><span>Time</span></div>
+            <div class="blank"><i></i><span>Location</span></div>
+          </div>
+          <div class="boxes"><span class="box">Pre-trip</span><span class="box">Post-trip</span></div>
+
+          <h3>Checklist</h3>
+          <table>
+            <thead><tr><th scope="col">Item</th><th scope="col">OK</th><th scope="col">Defect</th><th scope="col">N/A</th><th scope="col">Notes</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Service brakes, including trailer brake connections</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Parking brake</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Steering mechanism</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Lighting devices and reflectors</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Tires</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Horn</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Windshield wipers</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Rear-vision mirrors</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Coupling devices</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Wheels and rims</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Emergency equipment</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Leaks under the vehicle (where)</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+              <tr><th scope="row">Other:</th><td class="mark"></td><td class="mark"></td><td class="mark"></td><td class="notes"></td></tr>
+            </tbody>
+          </table>
+
+          <h3>Tread depth, lowest main groove (32nds). Guideline: FMCSA 393.75, 4/32 steer, 2/32 other positions</h3>
+          <div class="tire-grid">
+            <div class="tire-cell"><b>1L</b><span>/32</span></div>
+            <div class="tire-cell"><b>1R</b><span>/32</span></div>
+            <div class="tire-cell"><b>2LO</b><span>/32</span></div>
+            <div class="tire-cell"><b>2LI</b><span>/32</span></div>
+            <div class="tire-cell"><b>2RI</b><span>/32</span></div>
+            <div class="tire-cell"><b>2RO</b><span>/32</span></div>
+            <div class="tire-cell"><b>3LO</b><span>/32</span></div>
+            <div class="tire-cell"><b>3LI</b><span>/32</span></div>
+            <div class="tire-cell"><b>3RI</b><span>/32</span></div>
+            <div class="tire-cell"><b>3RO</b><span>/32</span></div>
+            <div class="tire-cell"><b>4LO</b><span>/32</span></div>
+            <div class="tire-cell"><b>4LI</b><span>/32</span></div>
+            <div class="tire-cell"><b>4RI</b><span>/32</span></div>
+            <div class="tire-cell"><b>4RO</b><span>/32</span></div>
+            <div class="tire-cell"><b>5LO</b><span>/32</span></div>
+            <div class="tire-cell"><b>5LI</b><span>/32</span></div>
+            <div class="tire-cell"><b>5RI</b><span>/32</span></div>
+            <div class="tire-cell"><b>5RO</b><span>/32</span></div>
+            <div class="tire-cell"><b>&nbsp;</b><span>/32</span></div>
+            <div class="tire-cell"><b>&nbsp;</b><span>/32</span></div>
+          </div>
+
+          <h3>Remarks</h3>
+          <div class="blank"><i></i></div>
+          <div class="blank"><i></i></div>
+
+          <h3>Sign-off</h3>
+          <div class="sign-grid">
+            <div class="sign-block">
+              <b>Driver</b>
+              <div class="boxes" style="padding-top:6px"><span class="box">No defects found</span><span class="box">Defects listed above</span></div>
+              <div class="blank"><i></i><span>Name</span></div>
+              <div class="blank"><i></i><span>Signature</span></div>
+              <div class="blank"><i></i><span>Date</span></div>
+            </div>
+            <div class="sign-block">
+              <b>Repair sign-off</b>
+              <div class="boxes" style="padding-top:6px"><span class="box">Repairs made</span><span class="box">Repairs not needed for safe operation</span></div>
+              <div class="blank"><i></i><span>Name</span></div>
+              <div class="blank"><i></i><span>Signature</span></div>
+              <div class="blank"><i></i><span>Date</span></div>
+            </div>
+            <div class="sign-block">
+              <b>Next driver review</b>
+              <div class="boxes" style="padding-top:6px"><span class="box">Reviewed this report</span></div>
+              <div class="blank"><i></i><span>Name</span></div>
+              <div class="blank"><i></i><span>Signature</span></div>
+              <div class="blank"><i></i><span>Date</span></div>
+            </div>
+          </div>
+          <div class="sheet-foot">
+            <span>Keep this report, the repair sign-off and the driver review for 3 months (49 CFR 396.11).</span>
+            <span>Checklist from Treadwise. A record-keeping aid, not legal advice.</span>
+          </div>
+        </section>
+
+        <h2 style="margin-top:56px">What 49 CFR 396.11 covers</h2>
+        <p>The rule asks drivers to prepare a written report at the end of each day's work on each vehicle they drove, covering at least the items on this checklist, and to sign it. Before the vehicle runs again, the carrier signs off that any listed defect was repaired or that a repair was not needed, and keeps the report, the repair sign-off and the driver review for three months. Electronic records are allowed.<sup><a href="#src-39611">1</a></sup></p>
+        <p>Two exceptions matter to small operators. A report is not required when no defect is found or reported, and the section does not apply to a carrier that operates only one commercial motor vehicle.<sup><a href="#src-39611">1</a></sup> Many owner-operators keep a daily record anyway, as a habit and as a record of what was checked and fixed.</p>
+        <p>Before driving, 49 CFR 396.13 asks the driver to be satisfied that the vehicle is in safe operating condition, to review the last report where one is required, and to sign it to acknowledge the repair sign-off.<sup><a href="#src-39613">2</a></sup></p>
+
+        <h2>Why the tire line deserves more than a tick</h2>
+        <ul>
+          <li>At the 2026 Roadcheck, tires were the second most common vehicle violation inspectors found, about 1 in 5.<sup><a href="#src-cvsa">3</a></sup></li>
+          <li>Tires are the most common roadside repair for trucks.<sup><a href="#src-tmc">4</a></sup></li>
+          <li>A roadside repair can cost about 4 times a shop repair.<sup><a href="#src-fleetnet">5</a></sup></li>
+        </ul>
+        <p class="guideline-badge"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span><b>FMCSA 393.75 guideline</b>4/32 on steer tires, 2/32 on all other positions, measured in a major tread groove</span></p>
+        <p>Writing the lowest groove for every position, rather than "tires OK", gives you a trend, and shows which tire is closest to the line. See the <a href="tread-depth-chart.html">tread depth chart</a> for 32nds in millimeters.<sup><a href="#src-393">6</a></sup></p>
+
+        <p class="legal">This checklist is a record-keeping aid, not legal advice. Rules change; check the current text of 49 CFR 396.11 and 396.13 for your operation.</p>
+
+        <h2>Sources</h2>
+        <ol class="sources">
+          <li id="src-39611">49 CFR 396.11, Driver vehicle inspection report(s). Legal Information Institute, Cornell Law School. <a href="https://www.law.cornell.edu/cfr/text/49/396.11">law.cornell.edu/cfr/text/49/396.11</a></li>
+          <li id="src-39613">49 CFR 396.13, Driver inspection. Legal Information Institute, Cornell Law School. <a href="https://www.law.cornell.edu/cfr/text/49/396.13">law.cornell.edu/cfr/text/49/396.13</a></li>
+          <li id="src-cvsa">CVSA 2026 International Roadcheck results, reported by FleetOwner, August 2026. <a href="https://www.fleetowner.com/safety/news/55400720/cvsa-2026-roadcheck-results-show-top-truck-driver-and-eld-violations">fleetowner.com</a></li>
+          <li id="src-tmc">ATA Technology &amp; Maintenance Council and FleetNet America benchmarking, reported by HDT Truckinginfo, 2020. <a href="https://www.truckinginfo.com/news/average-roadside-repair-costs-up-30-year-over-year">truckinginfo.com</a></li>
+          <li id="src-fleetnet">FleetNet America study, reported by FleetOwner, 2019. <a href="https://www.fleetowner.com/operations/maintenance/article/21703593/study-roadside-truck-breakdowns-occur-every-10000-miles">fleetowner.com</a></li>
+          <li id="src-393">49 CFR 393.75, Tires. Legal Information Institute, Cornell Law School. <a href="https://www.law.cornell.edu/cfr/text/49/393.75">law.cornell.edu/cfr/text/49/393.75</a></li>
+        </ol>
+      </article>
+      <aside class="aside">
+        <div class="slab cta-card">
+          <h2>The same record, with photos</h2>
+          <p>Treadwise runs this checklist on your iPhone or iPad with a tire map, a photo on every defect, signatures and a PDF you can share. It keeps the record; keeping it for as long as the rules require stays the carrier's job.</p>
+          <div class="actions"><!--
+  App Store badge slot. Apple requires its official badge artwork (Apple Marketing Tools,
+  https://tools.applemarketingtools.com/). Never redraw it. Save the official SVG as
+  site/assets/app-store-badge.svg and build.py uses it automatically once an app id is set.
+-->
+
+<a class="btn btn-primary" href="https://apps.apple.com/app/id6839294842">View in the App Store</a>
+</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Treadwise</h2>
+        <p class="muted small">Tire tread checks, tire maps and daily inspection records for cars, trucks, trailers and equipment. For iPhone and iPad.</p>
+        <p class="small"><a href="mailto:qidientlabs@gmail.com">qidientlabs@gmail.com</a></p>
+      </div>
+      <nav aria-label="Guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="tread-depth-chart.html">Tread depth chart</a></li>
+          <li><a href="penny-vs-quarter.html">Penny test vs quarter test</a></li>
+          <li><a href="uneven-tire-wear.html">Uneven tire wear</a></li>
+          <li><a href="dvir-checklist.html">Printable DVIR checklist</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help and legal">
+        <h2>Help</h2>
+        <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of use</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-legal legal">
+      <p>Treadwise gives guidance and keeps records. Every reading is an estimate: verify with a tread depth gauge. It is not an inspection and does not replace a qualified tire check.</p>
+      <p>Apple, iPhone, iPad, Face ID and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+      <p>&copy; 2026 QIDIENT GLOBAL LTD</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

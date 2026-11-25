@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Tire tread depth chart: 32nds to mm, with legal minimums</title>
+<meta name="description" content="Tread depth chart from 0/32 to 32/32 in inches and millimeters, a converter, and the minimum tread depth for cars and for trucks and buses under FMCSA 393.75, with sources.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3F3F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111013" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+
+<meta name="apple-itunes-app" content="app-id=6839294842">
+
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Treadwise">
+<meta property="og:title" content="Tire tread depth chart: 32nds to mm, with legal minimums">
+<meta property="og:description" content="Tread depth chart from 0/32 to 32/32 in inches and millimeters, a converter, and the minimum tread depth for cars and for trucks and buses under FMCSA 393.75, with sources.">
+
+<link rel="canonical" href="https://jerryjrdev.github.io/tiretreadscanner/tread-depth-chart.html">
+<meta property="og:url" content="https://jerryjrdev.github.io/tiretreadscanner/tread-depth-chart.html">
+<meta property="og:image" content="https://jerryjrdev.github.io/tiretreadscanner/assets/app-icon-1024.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/app-icon-1024.png">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Band patterns (DIRECTION.md §3): Watch fine 45° hatch, Replace soon bold 135° stripes. -->
+    <pattern id="p-watch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" style="fill:var(--watch-fill)"/>
+      <rect width="1.6" height="6" style="fill:var(--watch-on);opacity:.3"/>
+    </pattern>
+    <pattern id="p-replace" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(135)">
+      <rect width="11" height="11" style="fill:var(--replace-fill)"/>
+      <rect width="4.5" height="11" fill="#FFFFFF" opacity=".3"/>
+    </pattern>
+    <pattern id="p-watch-slab" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#FFBF2E"/>
+      <rect width="1.6" height="6" fill="#1C1300" opacity=".3"/>
+    </pattern>
+
+    <!-- Band icons: circle, triangle, octagon, clock (ANSI sign shapes). --knock is the cut-out colour. -->
+    <symbol id="i-good" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M7.3 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24"><path d="M10.3 3.2a2 2 0 0 1 3.4 0l9 15.6a2 2 0 0 1-1.7 3H3a2 2 0 0 1-1.7-3z" fill="currentColor"/><path d="M12 8.6v5.6" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.9" r="1.5" fill="var(--knock, #fff)"/></symbol>
+    <symbol id="i-replace" viewBox="0 0 24 24"><path d="M8 1.5h8l6.5 6.5v8L16 22.5H8L1.5 16V8z" fill="currentColor"/><path d="M8.4 8.4l7.2 7.2M15.6 8.4l-7.2 7.2" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-stale" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 6.8V12l3.6 2.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <!-- Line icons, 24 grid, 2 px stroke (set by .icon). -->
+    <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="1.8" y="7.5" width="20.4" height="9" rx="2"/><path d="M5.5 7.5v3.2M8.8 7.5v2M12 7.5v3.2M15.2 7.5v2M18.5 7.5v3.2"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 3.5h12.5a1.5 1.5 0 0 1 1.5 1.5v14.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5H19M9 7.5h6"/></symbol>
+    <symbol id="i-depth" viewBox="0 0 24 24"><rect x="6" y="1.8" width="12" height="20.4" rx="2.6"/><circle cx="10" cy="5" r=".5" fill="currentColor"/><circle cx="12" cy="5" r=".5" fill="currentColor"/><circle cx="14" cy="5" r=".5" fill="currentColor"/><path d="M9 14.5q3 2.5 6 0M9 11.5q3 2.5 6 0" /></symbol>
+    <symbol id="i-lidar" viewBox="0 0 24 24"><rect x="5" y="1.8" width="14" height="20.4" rx="2.6"/><rect x="7.5" y="4.3" width="8" height="8" rx="2"/><circle cx="10" cy="6.8" r="1.1"/><circle cx="10" cy="9.9" r="1.1"/><circle cx="13.2" cy="8.3" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M15 9.2a3.6 3.6 0 1 0 0 5.6M12.6 6.6v10.8"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 15.5v-3.2l2-5A2 2 0 0 1 6.9 6h10.2a2 2 0 0 1 1.9 1.3l2 5v3.2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zM3.5 12h17"/><path d="M5.5 16.5v2M18.5 16.5v2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1.8 5.5h11v10.5h-11zM12.8 9h4.6l3.8 3.8V16h-8.4"/><circle cx="6" cy="17.6" r="2"/><circle cx="17" cy="17.6" r="2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><rect x="3" y="2.5" width="4.5" height="7" rx="1.2"/><rect x="16.5" y="2.5" width="4.5" height="7" rx="1.2"/><rect x="3" y="14.5" width="4.5" height="7" rx="1.2"/><rect x="16.5" y="14.5" width="4.5" height="7" rx="1.2"/><path d="M7.5 6h9M7.5 18h9M12 6v12"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v13a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 20V4A1.5 1.5 0 0 1 6 2.5z"/><path d="M14 2.5V7h4.5M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24"><path d="M3 14.5c2-4 3.5-7 5-7 2.2 0-1.8 9 1 9 1.8 0 2.5-3 4-3 1.2 0 1 2 2.5 2 1 0 2-1 3-2"/><path d="M3 20.5h18"/></symbol>
+    <symbol id="i-leak" viewBox="0 0 24 24"><path d="M12 2.5s-6.5 7.2-6.5 11.8a6.5 6.5 0 0 0 13 0C18.5 9.7 12 2.5 12 2.5z"/><path d="M12 10v4.2"/><circle cx="12" cy="17.2" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><path d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path d="M8.2 12.2l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M6.5 8l4 2.5 3.5-1 5 6"/><path d="M6.5 17h14" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15zM10 21h4"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7.5h3.5L8.3 5h7.4l1.8 2.5H21a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.2" r="3.8"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 19.5h10.5a4.5 4.5 0 0 0 .6-9 6 6 0 0 0-11.6 1.4A3.8 3.8 0 0 0 7 19.5z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="11" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-noperson" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0M3 3l18 18"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3.5 6h17M9 6V3.8h6V6M6 6l1 15h10l1-15M10 10.5v6.5M14 10.5v6.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.8 4.8L19.5 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4.5v15M4.5 12h15"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M6.5 9V2.5h11V9M6.5 17.5H4a1.5 1.5 0 0 1-1.5-1.5v-5.5A1.5 1.5 0 0 1 4 9h16a1.5 1.5 0 0 1 1.5 1.5V16a1.5 1.5 0 0 1-1.5 1.5h-2.5"/><path d="M6.5 14h11v7.5h-11z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 4.5l7.5 7.5L9 19.5"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9.5h3.5L11 5.5v13l-4.5-4H3z"/><path d="M14.5 9a4 4 0 0 1 0 6M17.5 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></symbol>
+    <symbol id="i-tread" viewBox="0 0 34 14"><path d="M4 0h9L9 14H0zM16 0h9l-4 14h-9zM28 0h6v0L30 14h-6z" fill="currentColor" stroke="none"/></symbol>
+  </defs>
+</svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="Treadwise home">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#2A22D9"/>
+        <path d="M6 64V34q0-6 6-6h6v10a4 4 0 0 0 8 0V28h12v10a4 4 0 0 0 8 0V28h6q6 0 6 6v30z" fill="#1E1D22"/>
+        <g fill="none" stroke="#F4F3F1" stroke-width="2.6"><path d="M7.3 35v-1q0-4.7 4.7-4.7h6M26 29.3h12M46 29.3h6q4.7 0 4.7 4.7v1"/></g>
+        <g stroke="#F4F3F1" stroke-linecap="round"><path d="M37 16.5h10" stroke-width="3.4"/><path d="M42 17v20" stroke-width="2.6"/></g>
+        <circle cx="42" cy="38.2" r="3.1" fill="#F4F3F1"/>
+      </svg>
+      <span>Treadwise</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#guides">Guides</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Tire tread depth chart</h1>
+      <p class="lede">In the US, tread depth is measured in 32nds of an inch. Here is every step from 0/32 to 32/32 in inches and millimeters, the minimums for cars and trucks, and a converter.</p>
+    </header>
+    <div class="article-grid">
+      <article class="prose">
+
+        <form id="converter" class="card converter" hidden aria-labelledby="converter-title">
+          <h2 id="converter-title" style="font-size:2rem;margin:0">Converter</h2>
+          <div class="converter-row">
+            <div class="field">
+              <label for="depth-value">Tread depth</label>
+              <input id="depth-value" type="text" inputmode="decimal" value="4" autocomplete="off" aria-describedby="depth-hint">
+              <span class="hint" id="depth-hint">Whole or decimal numbers, for example 5 or 3.5</span>
+            </div>
+            <div class="field">
+              <label for="depth-unit">Unit</label>
+              <select id="depth-unit">
+                <option value="32">32nds of an inch</option>
+                <option value="mm">Millimeters</option>
+                <option value="in">Inches (decimal)</option>
+              </select>
+            </div>
+          </div>
+          <p id="converter-error" class="error" role="alert" hidden>Enter a depth from 0 to 40/32 (31.75 mm).</p>
+          <dl class="converter-out" aria-live="polite">
+            <div><dt>32nds</dt><dd id="out-32">–</dd></div>
+            <div><dt>Millimeters</dt><dd id="out-mm">–</dd></div>
+            <div><dt>Inches</dt><dd id="out-in">–</dd></div>
+          </dl>
+          <ul class="converter-bands" aria-live="polite">
+            <li><span>Car or pickup</span><span data-guideline="2" data-early="4">–</span></li>
+            <li><span>Truck or bus, steer tire</span><span data-guideline="4" data-early="6">–</span></li>
+            <li><span>Truck or bus, other positions</span><span data-guideline="2" data-early="4">–</span></li>
+          </ul>
+          <p class="legal" style="margin:0">Bands use the app's default presets: Replace soon at or below the guideline, Watch up to the early warning, Good above it. Estimate. Verify with a gauge.</p>
+        </form>
+
+        <h2 style="margin-top:56px">Minimum tread depth</h2>
+        <div class="zones" role="img" aria-label="Wear bands by tread depth. Car or pickup: Replace soon at 2/32 or less, Watch from 2/32 to 4/32, Good above 4/32. Truck or bus steer tire: Replace soon at 4/32 or less, Watch to 6/32, Good above. Other truck or bus positions: Replace soon at 2/32 or less, Watch to 4/32, Good above.">
+          <div class="zone-row">
+            <span class="zone-label">Car or pickup</span>
+            <div class="zone-bar"><span class="seg replace" style="--w:16.667%"></span><span class="seg watch" style="--w:16.667%"></span><span class="seg good" style="--w:66.666%"></span></div>
+          </div>
+          <div class="zone-row">
+            <span class="zone-label">Truck or bus, steer</span>
+            <div class="zone-bar"><span class="seg replace" style="--w:33.333%"></span><span class="seg watch" style="--w:16.667%"></span><span class="seg good" style="--w:50%"></span></div>
+          </div>
+          <div class="zone-row">
+            <span class="zone-label">Truck or bus, other</span>
+            <div class="zone-bar"><span class="seg replace" style="--w:16.667%"></span><span class="seg watch" style="--w:16.667%"></span><span class="seg good" style="--w:66.666%"></span></div>
+          </div>
+          <div class="zone-row zone-axis-row" aria-hidden="true">
+            <span class="zone-label"></span>
+            <div class="zone-axis">
+              <span style="--x:0%">0</span><span style="--x:16.667%">2</span><span style="--x:33.333%">4</span><span style="--x:50%">6</span><span style="--x:66.667%">8</span><span style="--x:83.333%">10</span><span style="--x:100%">12/32</span>
+            </div>
+          </div>
+        </div>
+        <ul class="legend" aria-hidden="true">
+          <li><span class="chip replace"><span class="swatch"></span><svg class="icon"><use href="#i-replace"/></svg>Replace soon</span></li>
+          <li><span class="chip watch"><span class="swatch"></span><svg class="icon"><use href="#i-watch"/></svg>Watch</span></li>
+          <li><span class="chip good"><span class="swatch"></span><svg class="icon"><use href="#i-good"/></svg>Good</span></li>
+        </ul>
+
+        <h3>Trucks, tractors and buses</h3>
+        <p class="guideline-badge"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span><b>FMCSA 393.75 guideline</b>4/32 on steer tires, 2/32 on all other positions</span></p>
+        <p>Federal rule 49 CFR 393.75 sets the minimum for commercial vehicles. Tires on the front wheels of a bus, truck or truck tractor need at least 4/32 inch of tread at any point on a major tread groove. All other tires need at least 2/32 inch in a major groove. Measurements are not taken where tie bars, humps or fillets are.<sup><a href="#src-393">1</a></sup></p>
+
+        <h3>Cars and pickups</h3>
+        <p class="guideline-badge"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span><b>Common legal minimum 2/32</b>Check your state's law</span></p>
+        <p>For passenger vehicles, 2/32 inch is the usual replacement line: AAA notes that current industry guidelines and many state laws set it there,<sup><a href="#src-aaa">2</a></sup> and NHTSA says tires are not safe and should be replaced at 2/32.<sup><a href="#src-nhtsa">3</a></sup> Laws differ by state.</p>
+
+        <h3>Why many drivers replace sooner</h3>
+        <p>AAA suggests shopping for new tires at 4/32.<sup><a href="#src-aaa">2</a></sup> In AAA's test, tires worn to 4/32 needed about 87 feet more to stop on a wet road from 60 mph, and when new tires had stopped, the worn ones were still doing almost 40 mph.<sup><a href="#src-aaa-report">4</a></sup></p>
+
+        <h2>32nds to inches and millimeters</h2>
+        <p>One 32nd of an inch is exactly 0.79375 mm, because an inch is 25.4 mm. Millimeters below are rounded to one decimal.</p>
+        <div class="table-wrap">
+          <table class="chart-table">
+            <caption>Tread depth conversion, 0/32 to 32/32</caption>
+            <thead><tr><th scope="col" class="num">32nds</th><th scope="col" class="num">Inch fraction</th><th scope="col" class="num">Inches</th><th scope="col" class="num">mm</th><th scope="col">Note</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="num">0/32</th><td class="num">0</td><td class="num">0.000</td><td class="num">0.0</td><td></td></tr>
+              <tr><th scope="row" class="num">1/32</th><td class="num">1/32</td><td class="num">0.031</td><td class="num">0.8</td><td></td></tr>
+              <tr class="key"><th scope="row" class="num">2/32</th><td class="num">1/16</td><td class="num">0.063</td><td class="num">1.6</td><td>Common legal minimum for cars. FMCSA 393.75 minimum for truck and bus tires other than steer.</td></tr>
+              <tr><th scope="row" class="num">3/32</th><td class="num">3/32</td><td class="num">0.094</td><td class="num">2.4</td><td></td></tr>
+              <tr class="key"><th scope="row" class="num">4/32</th><td class="num">1/8</td><td class="num">0.125</td><td class="num">3.2</td><td>FMCSA 393.75 minimum for steer tires. AAA suggests shopping for new tires. Treadwise early warning for cars and other truck positions.</td></tr>
+              <tr><th scope="row" class="num">5/32</th><td class="num">5/32</td><td class="num">0.156</td><td class="num">4.0</td><td></td></tr>
+              <tr class="key"><th scope="row" class="num">6/32</th><td class="num">3/16</td><td class="num">0.188</td><td class="num">4.8</td><td>Treadwise early warning for steer tires.</td></tr>
+              <tr><th scope="row" class="num">7/32</th><td class="num">7/32</td><td class="num">0.219</td><td class="num">5.6</td><td></td></tr>
+              <tr><th scope="row" class="num">8/32</th><td class="num">1/4</td><td class="num">0.250</td><td class="num">6.4</td><td></td></tr>
+              <tr><th scope="row" class="num">9/32</th><td class="num">9/32</td><td class="num">0.281</td><td class="num">7.1</td><td></td></tr>
+              <tr><th scope="row" class="num">10/32</th><td class="num">5/16</td><td class="num">0.313</td><td class="num">7.9</td><td></td></tr>
+              <tr><th scope="row" class="num">11/32</th><td class="num">11/32</td><td class="num">0.344</td><td class="num">8.7</td><td></td></tr>
+              <tr><th scope="row" class="num">12/32</th><td class="num">3/8</td><td class="num">0.375</td><td class="num">9.5</td><td></td></tr>
+              <tr><th scope="row" class="num">13/32</th><td class="num">13/32</td><td class="num">0.406</td><td class="num">10.3</td><td></td></tr>
+              <tr><th scope="row" class="num">14/32</th><td class="num">7/16</td><td class="num">0.438</td><td class="num">11.1</td><td></td></tr>
+              <tr><th scope="row" class="num">15/32</th><td class="num">15/32</td><td class="num">0.469</td><td class="num">11.9</td><td></td></tr>
+              <tr><th scope="row" class="num">16/32</th><td class="num">1/2</td><td class="num">0.500</td><td class="num">12.7</td><td></td></tr>
+              <tr><th scope="row" class="num">17/32</th><td class="num">17/32</td><td class="num">0.531</td><td class="num">13.5</td><td></td></tr>
+              <tr><th scope="row" class="num">18/32</th><td class="num">9/16</td><td class="num">0.563</td><td class="num">14.3</td><td></td></tr>
+              <tr><th scope="row" class="num">19/32</th><td class="num">19/32</td><td class="num">0.594</td><td class="num">15.1</td><td></td></tr>
+              <tr><th scope="row" class="num">20/32</th><td class="num">5/8</td><td class="num">0.625</td><td class="num">15.9</td><td></td></tr>
+              <tr><th scope="row" class="num">21/32</th><td class="num">21/32</td><td class="num">0.656</td><td class="num">16.7</td><td></td></tr>
+              <tr><th scope="row" class="num">22/32</th><td class="num">11/16</td><td class="num">0.688</td><td class="num">17.5</td><td></td></tr>
+              <tr><th scope="row" class="num">23/32</th><td class="num">23/32</td><td class="num">0.719</td><td class="num">18.3</td><td></td></tr>
+              <tr><th scope="row" class="num">24/32</th><td class="num">3/4</td><td class="num">0.750</td><td class="num">19.1</td><td></td></tr>
+              <tr><th scope="row" class="num">25/32</th><td class="num">25/32</td><td class="num">0.781</td><td class="num">19.8</td><td></td></tr>
+              <tr><th scope="row" class="num">26/32</th><td class="num">13/16</td><td class="num">0.813</td><td class="num">20.6</td><td></td></tr>
+              <tr><th scope="row" class="num">27/32</th><td class="num">27/32</td><td class="num">0.844</td><td class="num">21.4</td><td></td></tr>
+              <tr><th scope="row" class="num">28/32</th><td class="num">7/8</td><td class="num">0.875</td><td class="num">22.2</td><td></td></tr>
+              <tr><th scope="row" class="num">29/32</th><td class="num">29/32</td><td class="num">0.906</td><td class="num">23.0</td><td></td></tr>
+              <tr><th scope="row" class="num">30/32</th><td class="num">15/16</td><td class="num">0.938</td><td class="num">23.8</td><td></td></tr>
+              <tr><th scope="row" class="num">31/32</th><td class="num">31/32</td><td class="num">0.969</td><td class="num">24.6</td><td></td></tr>
+              <tr><th scope="row" class="num">32/32</th><td class="num">1</td><td class="num">1.000</td><td class="num">25.4</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>How to measure tread depth</h2>
+        <ul>
+          <li>Measure in a main groove, not on a wear bar or tie bar.</li>
+          <li>Check the outer, center and inner grooves. The lowest reading is the one that counts, and a difference between them can mean <a href="uneven-tire-wear.html">uneven wear</a>.</li>
+          <li>On steer tires, check more than one spot around the tire.</li>
+          <li>A tread depth gauge gives you the number. The <a href="penny-vs-quarter.html">penny and quarter tests</a> tell you which side of 2/32 or 4/32 you are on.</li>
+          <li>NHTSA suggests checking tread at least once a month.<sup><a href="#src-nhtsa">3</a></sup></li>
+        </ul>
+
+        <h2>Sources</h2>
+        <ol class="sources">
+          <li id="src-393">49 CFR 393.75, Tires. Legal Information Institute, Cornell Law School. <a href="https://www.law.cornell.edu/cfr/text/49/393.75">law.cornell.edu/cfr/text/49/393.75</a></li>
+          <li id="src-aaa">AAA newsroom, press release on worn tires and wet braking, June 2018. <a href="https://newsroom.aaa.com/2018/06/tread-lightly-worn-tires-drivers-risk/">newsroom.aaa.com</a></li>
+          <li id="src-nhtsa">NHTSA, Tires: maintenance and tire tread. <a href="https://www.nhtsa.gov/vehicle-safety/tires">nhtsa.gov/vehicle-safety/tires</a></li>
+          <li id="src-aaa-report">AAA / Automobile Club of Southern California Automotive Research Center, Tire Study Report, 2018. <a href="https://www.aaa.com/AAA/common/AAR/files/Tire-Study-Report.pdf">aaa.com (PDF)</a></li>
+        </ol>
+      </article>
+      <aside class="aside">
+        <div class="slab cta-card">
+          <h2>Get the number for every groove</h2>
+          <p>Treadwise estimates the depth of each groove on supported iPhones and guides a coin check on the rest, then keeps the reading on a tire map.</p>
+          <div class="actions"><!--
+  App Store badge slot. Apple requires its official badge artwork (Apple Marketing Tools,
+  https://tools.applemarketingtools.com/). Never redraw it. Save the official SVG as
+  site/assets/app-store-badge.svg and build.py uses it automatically once an app id is set.
+-->
+
+<a class="btn btn-primary" href="https://apps.apple.com/app/id6839294842">View in the App Store</a>
+</div>
+          <p class="disclaimer" style="color:var(--on-rubber)"><svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg>Estimate. Verify with a gauge.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Treadwise</h2>
+        <p class="muted small">Tire tread checks, tire maps and daily inspection records for cars, trucks, trailers and equipment. For iPhone and iPad.</p>
+        <p class="small"><a href="mailto:qidientlabs@gmail.com">qidientlabs@gmail.com</a></p>
+      </div>
+      <nav aria-label="Guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="tread-depth-chart.html">Tread depth chart</a></li>
+          <li><a href="penny-vs-quarter.html">Penny test vs quarter test</a></li>
+          <li><a href="uneven-tire-wear.html">Uneven tire wear</a></li>
+          <li><a href="dvir-checklist.html">Printable DVIR checklist</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help and legal">
+        <h2>Help</h2>
+        <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of use</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-legal legal">
+      <p>Treadwise gives guidance and keeps records. Every reading is an estimate: verify with a tread depth gauge. It is not an inspection and does not replace a qualified tire check.</p>
+      <p>Apple, iPhone, iPad, Face ID and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+      <p>&copy; 2026 QIDIENT GLOBAL LTD</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

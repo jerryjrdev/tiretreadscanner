@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Privacy policy: Treadwise</title>
+<meta name="description" content="Treadwise has no account, no ads and no tracking. Your readings, photos and inspection records stay on your device, and you can delete them from Settings.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3F3F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111013" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+
+<meta name="apple-itunes-app" content="app-id=6839294842">
+
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Treadwise">
+<meta property="og:title" content="Privacy policy: Treadwise">
+<meta property="og:description" content="Treadwise has no account, no ads and no tracking. Your readings, photos and inspection records stay on your device, and you can delete them from Settings.">
+
+<link rel="canonical" href="https://jerryjrdev.github.io/tiretreadscanner/privacy.html">
+<meta property="og:url" content="https://jerryjrdev.github.io/tiretreadscanner/privacy.html">
+<meta property="og:image" content="https://jerryjrdev.github.io/tiretreadscanner/assets/app-icon-1024.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/app-icon-1024.png">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<!-- Draft for legal review before publishing. Describes the v1.0 release build: docs/DECISIONS.md (2026-11-24 provisional defaults, 2026-11-25 RevenueCat) and docs/store/app-store-connect/app-privacy.md (section 5 lists what this page must state; revenuecat.md section 2 is the data inventory). -->
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Band patterns (DIRECTION.md §3): Watch fine 45° hatch, Replace soon bold 135° stripes. -->
+    <pattern id="p-watch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" style="fill:var(--watch-fill)"/>
+      <rect width="1.6" height="6" style="fill:var(--watch-on);opacity:.3"/>
+    </pattern>
+    <pattern id="p-replace" width="11" height="11" patternUnits="userSpaceOnUse" patternTransform="rotate(135)">
+      <rect width="11" height="11" style="fill:var(--replace-fill)"/>
+      <rect width="4.5" height="11" fill="#FFFFFF" opacity=".3"/>
+    </pattern>
+    <pattern id="p-watch-slab" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#FFBF2E"/>
+      <rect width="1.6" height="6" fill="#1C1300" opacity=".3"/>
+    </pattern>
+
+    <!-- Band icons: circle, triangle, octagon, clock (ANSI sign shapes). --knock is the cut-out colour. -->
+    <symbol id="i-good" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M7.3 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24"><path d="M10.3 3.2a2 2 0 0 1 3.4 0l9 15.6a2 2 0 0 1-1.7 3H3a2 2 0 0 1-1.7-3z" fill="currentColor"/><path d="M12 8.6v5.6" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.9" r="1.5" fill="var(--knock, #fff)"/></symbol>
+    <symbol id="i-replace" viewBox="0 0 24 24"><path d="M8 1.5h8l6.5 6.5v8L16 22.5H8L1.5 16V8z" fill="currentColor"/><path d="M8.4 8.4l7.2 7.2M15.6 8.4l-7.2 7.2" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-stale" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 6.8V12l3.6 2.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <!-- Line icons, 24 grid, 2 px stroke (set by .icon). -->
+    <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="1.8" y="7.5" width="20.4" height="9" rx="2"/><path d="M5.5 7.5v3.2M8.8 7.5v2M12 7.5v3.2M15.2 7.5v2M18.5 7.5v3.2"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 3.5h12.5a1.5 1.5 0 0 1 1.5 1.5v14.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5H19M9 7.5h6"/></symbol>
+    <symbol id="i-depth" viewBox="0 0 24 24"><rect x="6" y="1.8" width="12" height="20.4" rx="2.6"/><circle cx="10" cy="5" r=".5" fill="currentColor"/><circle cx="12" cy="5" r=".5" fill="currentColor"/><circle cx="14" cy="5" r=".5" fill="currentColor"/><path d="M9 14.5q3 2.5 6 0M9 11.5q3 2.5 6 0" /></symbol>
+    <symbol id="i-lidar" viewBox="0 0 24 24"><rect x="5" y="1.8" width="14" height="20.4" rx="2.6"/><rect x="7.5" y="4.3" width="8" height="8" rx="2"/><circle cx="10" cy="6.8" r="1.1"/><circle cx="10" cy="9.9" r="1.1"/><circle cx="13.2" cy="8.3" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M15 9.2a3.6 3.6 0 1 0 0 5.6M12.6 6.6v10.8"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 15.5v-3.2l2-5A2 2 0 0 1 6.9 6h10.2a2 2 0 0 1 1.9 1.3l2 5v3.2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zM3.5 12h17"/><path d="M5.5 16.5v2M18.5 16.5v2"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1.8 5.5h11v10.5h-11zM12.8 9h4.6l3.8 3.8V16h-8.4"/><circle cx="6" cy="17.6" r="2"/><circle cx="17" cy="17.6" r="2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><rect x="3" y="2.5" width="4.5" height="7" rx="1.2"/><rect x="16.5" y="2.5" width="4.5" height="7" rx="1.2"/><rect x="3" y="14.5" width="4.5" height="7" rx="1.2"/><rect x="16.5" y="14.5" width="4.5" height="7" rx="1.2"/><path d="M7.5 6h9M7.5 18h9M12 6v12"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v13a1.5 1.5 0 0 1-1.5 1.5H6A1.5 1.5 0 0 1 4.5 20V4A1.5 1.5 0 0 1 6 2.5z"/><path d="M14 2.5V7h4.5M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24"><path d="M3 14.5c2-4 3.5-7 5-7 2.2 0-1.8 9 1 9 1.8 0 2.5-3 4-3 1.2 0 1 2 2.5 2 1 0 2-1 3-2"/><path d="M3 20.5h18"/></symbol>
+    <symbol id="i-leak" viewBox="0 0 24 24"><path d="M12 2.5s-6.5 7.2-6.5 11.8a6.5 6.5 0 0 0 13 0C18.5 9.7 12 2.5 12 2.5z"/><path d="M12 10v4.2"/><circle cx="12" cy="17.2" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><path d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path d="M8.2 12.2l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M6.5 8l4 2.5 3.5-1 5 6"/><path d="M6.5 17h14" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15zM10 21h4"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7.5h3.5L8.3 5h7.4l1.8 2.5H21a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.2" r="3.8"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 19.5h10.5a4.5 4.5 0 0 0 .6-9 6 6 0 0 0-11.6 1.4A3.8 3.8 0 0 0 7 19.5z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="11" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-noperson" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0M3 3l18 18"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3.5 6h17M9 6V3.8h6V6M6 6l1 15h10l1-15M10 10.5v6.5M14 10.5v6.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l4.8 4.8L19.5 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4.5v15M4.5 12h15"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M6.5 9V2.5h11V9M6.5 17.5H4a1.5 1.5 0 0 1-1.5-1.5v-5.5A1.5 1.5 0 0 1 4 9h16a1.5 1.5 0 0 1 1.5 1.5V16a1.5 1.5 0 0 1-1.5 1.5h-2.5"/><path d="M6.5 14h11v7.5h-11z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 4.5l7.5 7.5L9 19.5"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9.5h3.5L11 5.5v13l-4.5-4H3z"/><path d="M14.5 9a4 4 0 0 1 0 6M17.5 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></symbol>
+    <symbol id="i-tread" viewBox="0 0 34 14"><path d="M4 0h9L9 14H0zM16 0h9l-4 14h-9zM28 0h6v0L30 14h-6z" fill="currentColor" stroke="none"/></symbol>
+  </defs>
+</svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="Treadwise home">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#2A22D9"/>
+        <path d="M6 64V34q0-6 6-6h6v10a4 4 0 0 0 8 0V28h12v10a4 4 0 0 0 8 0V28h6q6 0 6 6v30z" fill="#1E1D22"/>
+        <g fill="none" stroke="#F4F3F1" stroke-width="2.6"><path d="M7.3 35v-1q0-4.7 4.7-4.7h6M26 29.3h12M46 29.3h6q4.7 0 4.7 4.7v1"/></g>
+        <g stroke="#F4F3F1" stroke-linecap="round"><path d="M37 16.5h10" stroke-width="3.4"/><path d="M42 17v20" stroke-width="2.6"/></g>
+        <circle cx="42" cy="38.2" r="3.1" fill="#F4F3F1"/>
+      </svg>
+      <span>Treadwise</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#guides">Guides</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Privacy policy</h1>
+      <p class="lede">The short version: no account, no ads, no tracking, and nothing sold. What you record stays on your device, and you can delete it from Settings at any time. The app sends out only what your subscription needs, and RevenueCat keeps that for us under a random ID.</p>
+      <p class="updated">Effective November 25, 2026</p>
+    </header>
+    <div class="article-grid">
+      <article class="prose">
+        <h2>Who we are</h2>
+        <p>Treadwise is published by QIDIENT GLOBAL LTD ("we"). This policy covers the Treadwise app for iPhone and iPad and this website. Questions go to <a href="mailto:qidientlabs@gmail.com">qidientlabs@gmail.com</a>.</p>
+
+        <h2>No account</h2>
+        <p>You don't create an account to use Treadwise, and we don't ask for your name, email address or phone number. Names you type in the app (for example the default inspector, a mechanic or the next driver on an inspection record) stay with your records on your device.</p>
+
+        <h2>What stays on your device</h2>
+        <p>Everything you create in the app is stored in the app's storage on your device:</p>
+        <ul>
+          <li>your vehicles and units, their tire maps and the details you enter (unit number, plate, VIN, make and model, odometer or hours);</li>
+          <li>tire readings: the depth per groove or wear band, the method used, the confidence, notes and a photo of the tread;</li>
+          <li>daily inspection records (DVIRs), with checklist answers, photos and the signatures you draw or type;</li>
+          <li>leak flags, defects and repair notes, with their photos and the mechanic's name and signature;</li>
+          <li>your settings, including a company name and logo for PDF reports;</li>
+          <li>the PDF reports and CSV files you create.</li>
+        </ul>
+        <p>Depth scans are processed on your device. The app keeps the result of a scan, not the raw depth data, and never sends depth data or photos to us.</p>
+
+        <h2>iCloud sync is not active yet</h2>
+        <p>This version of the app does not sync. There is no iCloud copy and no server copy: your records stay on the device where you made them, and Settings shows them as saved on this device. Your subscription still works on every device signed in to the same Apple Account.</p>
+        <p>If a later version turns on iCloud sync, it will use your private iCloud database through Apple's CloudKit. We cannot read that database. Sync would run only while iCloud is on for the app in your device settings, its storage would count against your iCloud plan, and Delete all data would then remove the iCloud copy too. We will update this policy and the App Store privacy details before that version is released.</p>
+
+        <h2>Permissions the app asks for</h2>
+        <p>The app asks for each permission when you first use the feature that needs it, and works without the optional ones.</p>
+        <div class="table-wrap">
+          <table>
+            <caption>Device access and why</caption>
+            <thead><tr><th scope="col">Access</th><th scope="col">What it is used for</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Camera</th><td>Scanning tire tread and taking tread, defect, leak and repair photos. Images and depth data are processed on your device. The front depth camera is pointed at the tire to measure it: the app does not use Face ID, does not look for faces and cannot read Face ID data.</td></tr>
+              <tr><th scope="row">Motion</th><td>Telling you to hold still during a scan. Motion readings are used in the moment and not stored.</td></tr>
+              <tr><th scope="row">Notifications (optional)</th><td>Reminders scheduled on your device: the monthly tread check you turn on, and, if you already allow notifications, a reminder two days before a free trial ends. Nothing about them is sent to us.</td></tr>
+              <tr><th scope="row">Photos you pick (no permission needed)</th><td>When you add a photo or a company logo from your library, iOS shows its own photo picker and the app receives only the photos you choose. It cannot browse your library.</td></tr>
+              <tr><th scope="row">Photo library, add only (optional)</th><td>Only if you save an image to your library from the share sheet. The app can add that image; it cannot see or read your library.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Spoken scan coaching uses your device's built-in speech. The app does not use the microphone, and this version does not ask for your location.</p>
+        <p>If a later version adds a new permission (for example an optional location stamp on inspection records), the app will ask for it only when you first use that feature, and we will update this policy before that version is released.</p>
+
+        <h2>What we receive</h2>
+        <p>The app sends no usage analytics anywhere and makes no network requests to servers we run. The one service it talks to is RevenueCat, to check your subscription (see "Subscriptions and RevenueCat" below). Through RevenueCat we can see subscription records under a random ID, and nothing else.</p>
+        <p>To help with troubleshooting, the app writes short app events (for example "scan completed" or "trial started") to your device's own system log. They carry only event names, choices and counts, stay on your device and are not sent to us. They never contain photos, names, notes or anything else you typed.</p>
+        <p>If we add usage statistics in a later version, they will be anonymous counts that help us improve scanning (for example "scan completed" or "scan needed a retake"). They will not include your photos, readings, reports, names or location, will not be linked to you or used for advertising, and this policy and the App Store privacy details will be updated before that version is released.</p>
+        <p>If you have chosen to share analytics with app developers in your device settings, Apple may give us crash reports and usage statistics in a form that does not identify you. You can turn this off in your device's privacy settings.</p>
+
+        <h2>No tracking, no ads, nothing sold</h2>
+        <p>The app has no advertising, no analytics or tracking SDKs and no ad attribution, never asks to track you and does not track you across other companies' apps or websites. The only third-party code that sends data is RevenueCat's, for subscriptions. We do not sell or share personal data.</p>
+
+        <h2>Subscriptions and RevenueCat</h2>
+        <p>Apple handles every payment. We never see your card or other payment details.</p>
+        <p>We use RevenueCat, Inc., a subscription service provider, to check and restore your subscription and to manage our plans and prices. RevenueCat handles this data on our behalf, under its data processing terms with us.</p>
+        <p>What RevenueCat receives from the app:</p>
+        <ul>
+          <li>a random ID the app creates on your device. It is not linked to your name, email address or Apple Account, and we don't ask for any of those;</li>
+          <li>your App Store purchase history for Treadwise: the plan, price and currency, and the dates and status of purchases, trials, renewals, cancellations, billing problems and refunds, with the transaction records Apple signs;</li>
+          <li>technical details sent with each request: device model, iOS version, app version, language and region settings, App Store country, the app's tracking-permission status (the app never asks to track you) and an identifier that iOS gives to apps from the same developer on your device (not the advertising identifier).</li>
+        </ul>
+        <p>Your IP address reaches RevenueCat with each request, as with any internet connection. RevenueCat uses it only to estimate your country when the App Store doesn't provide one, and says it doesn't keep it.</p>
+        <p>RevenueCat never receives your readings, photos, vehicles, inspection records, signatures, the names or notes you type, your onboarding answers or your location.</p>
+        <p>Why: to confirm that your trial or subscription is active and unlock the app, to restore it on a new device, to apply offer codes, to show the plans and prices on the subscription screen (which lets us change or compare plans and prices without an app update; the App Store always shows the price you will pay before you confirm), and to count trials, renewals, cancellations and refunds so we understand how the app is doing.</p>
+        <p>How long: RevenueCat keeps these records while we use it for the app, so your subscription keeps working and our accounts stay accurate, unless you ask us to delete them. If we stop using RevenueCat, we ask it to delete them.</p>
+        <p>Deleting them: write to <a href="mailto:qidientlabs@gmail.com">qidientlabs@gmail.com</a> with the Order ID from Apple's receipt email (you can also find it at reportaproblem.apple.com), so we can find your record without knowing who you are. We delete it from RevenueCat and confirm within 30 days. Deleting the record doesn't cancel your subscription: cancel it in your App Store account settings first. While the app stays installed it keeps the same random ID, and RevenueCat creates a new record under that ID the next time the app checks your subscription, whether or not you subscribe. To stop that, delete the app before you write to us. If you install it again later, it starts with a new random ID.</p>
+        <p>RevenueCat's own privacy policy: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+
+        <h2>Sharing reports and exports</h2>
+        <p>When you share a PDF report, a CSV export or a photo, it goes only where you send it, using your device's share sheet (for example Mail, Messages, AirDrop or Files). A PDF contains what you put in the record: names, signatures, photos, readings and your company name and logo. By default it also carries a small "Made with Treadwise" footer with a QR code, which you can turn off in Settings.</p>
+
+        <h2>Contacting support from the app</h2>
+        <p>Settings › Contact support opens a draft email in your Mail app with the app version, your device model and iOS version filled in. You see the whole draft before you send it, and the app attaches nothing else.</p>
+
+        <h2>Deleting your data</h2>
+        <p>Settings › Delete all data removes every unit, reading, inspection record, photo and signature from the device. You type "delete" to confirm, and it can't be undone, so share any PDF reports you need to keep first. Your subscription stays active.</p>
+        <p>Delete all data doesn't touch your subscription record at RevenueCat; to have that deleted, see "Subscriptions and RevenueCat" above.</p>
+        <p>Deleting the app also removes its data. If you back up your device to iCloud or a computer, that backup can hold a copy of the app's data until the backup itself is deleted.</p>
+        <p>Inspection records are yours to keep. If the rules for your operation require you to keep DVIRs (49 CFR 396.11 asks motor carriers to keep them for three months), keep copies before you delete anything.</p>
+
+        <h2>Emailing us</h2>
+        <p>If you write to us, we use your email address and message only to reply, and we delete the conversation when it is no longer needed or when you ask.</p>
+
+        <h2>This website</h2>
+        <p>This website sets no cookies, runs no analytics and loads nothing from other companies. Like any web server, our host may keep standard access logs (such as IP address and the page requested) for security and to keep the site running.</p>
+
+        <h2>Children</h2>
+        <p>Treadwise is made for drivers, vehicle owners and fleets. It is not directed at children under 13.</p>
+
+        <h2>Your rights</h2>
+        <p>Because your records stay on your device, you can view, export and delete them yourself at any time. For anything we hold (such as an email you sent us, or your subscription record at RevenueCat), write to <a href="mailto:qidientlabs@gmail.com">qidientlabs@gmail.com</a> and we will answer within 30 days.</p>
+
+        <h2>Changes</h2>
+        <p>If this policy changes, we will update the date at the top of this page and, for material changes, tell you in the app before they take effect.</p>
+      </article>
+      <aside class="aside" aria-label="Summary">
+        <div class="card">
+          <h2 style="font-size:2rem;margin-bottom:12px">At a glance</h2>
+          <ul class="privacy-points">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-noperson"/></svg>No account</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Your records stay on your device</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg>No iCloud or server copy in this version</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-noperson"/></svg>No ads, no tracking, nothing sold</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-seal"/></svg>Subscriptions checked through RevenueCat, under a random ID</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>Delete all data from Settings</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h2>Treadwise</h2>
+        <p class="muted small">Tire tread checks, tire maps and daily inspection records for cars, trucks, trailers and equipment. For iPhone and iPad.</p>
+        <p class="small"><a href="mailto:qidientlabs@gmail.com">qidientlabs@gmail.com</a></p>
+      </div>
+      <nav aria-label="Guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="tread-depth-chart.html">Tread depth chart</a></li>
+          <li><a href="penny-vs-quarter.html">Penny test vs quarter test</a></li>
+          <li><a href="uneven-tire-wear.html">Uneven tire wear</a></li>
+          <li><a href="dvir-checklist.html">Printable DVIR checklist</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help and legal">
+        <h2>Help</h2>
+        <ul>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of use</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-legal legal">
+      <p>Treadwise gives guidance and keeps records. Every reading is an estimate: verify with a tread depth gauge. It is not an inspection and does not replace a qualified tire check.</p>
+      <p>Apple, iPhone, iPad, Face ID and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+      <p>&copy; 2026 QIDIENT GLOBAL LTD</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
