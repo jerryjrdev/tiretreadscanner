@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 <title>Treadwise: tire tread scanner and DVIR for iPhone</title>
-<meta name="description" content="Estimate tire tread depth per groove with your iPhone, catch uneven wear early, keep a tire map for every vehicle and a signed daily inspection record (DVIR).">
+<meta name="description" content="Check tire tread with your iPhone, log the depth of each groove, catch uneven wear early, keep a tire map for every vehicle and a signed daily inspection record (DVIR).">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Treadwise">
 <meta property="og:title" content="Treadwise: tire tread scanner and DVIR for iPhone">
-<meta property="og:description" content="Estimate tire tread depth per groove with your iPhone, catch uneven wear early, keep a tire map for every vehicle and a signed daily inspection record (DVIR).">
+<meta property="og:description" content="Check tire tread with your iPhone, log the depth of each groove, catch uneven wear early, keep a tire map for every vehicle and a signed daily inspection record (DVIR).">
 
 <link rel="canonical" href="https://jerryjrdev.github.io/tiretreadscanner/">
 <meta property="og:url" content="https://jerryjrdev.github.io/tiretreadscanner/">
@@ -32,7 +32,6 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- Band patterns (DIRECTION.md §3): Watch fine 45° hatch, Replace soon bold 135° stripes. -->
     <pattern id="p-watch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="6" height="6" style="fill:var(--watch-fill)"/>
       <rect width="1.6" height="6" style="fill:var(--watch-on);opacity:.3"/>
@@ -46,13 +45,11 @@
       <rect width="1.6" height="6" fill="#1C1300" opacity=".3"/>
     </pattern>
 
-    <!-- Band icons: circle, triangle, octagon, clock (ANSI sign shapes). --knock is the cut-out colour. -->
     <symbol id="i-good" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M7.3 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-watch" viewBox="0 0 24 24"><path d="M10.3 3.2a2 2 0 0 1 3.4 0l9 15.6a2 2 0 0 1-1.7 3H3a2 2 0 0 1-1.7-3z" fill="currentColor"/><path d="M12 8.6v5.6" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.9" r="1.5" fill="var(--knock, #fff)"/></symbol>
     <symbol id="i-replace" viewBox="0 0 24 24"><path d="M8 1.5h8l6.5 6.5v8L16 22.5H8L1.5 16V8z" fill="currentColor"/><path d="M8.4 8.4l7.2 7.2M15.6 8.4l-7.2 7.2" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/></symbol>
     <symbol id="i-stale" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 6.8V12l3.6 2.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 
-    <!-- Line icons, 24 grid, 2 px stroke (set by .icon). -->
     <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="1.8" y="7.5" width="20.4" height="9" rx="2"/><path d="M5.5 7.5v3.2M8.8 7.5v2M12 7.5v3.2M15.2 7.5v2M18.5 7.5v3.2"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" fill="currentColor"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 3.5h12.5a1.5 1.5 0 0 1 1.5 1.5v14.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5H19M9 7.5h6"/></symbol>
@@ -108,19 +105,13 @@
 </header>
 <main id="main">
 
-  <!-- Hero: the reading is the most characteristic thing in this world, so it leads. -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div>
         <h1 id="hero-title">Know which tire goes next.</h1>
-        <p class="lede">Scan the tread with your iPhone, see the depth of each groove, catch uneven wear early, and keep a signed record of every walk-around. For the car in the driveway and the trucks in the yard.</p>
+        <p class="lede">Check the tread with your iPhone, log the depth of each groove, catch uneven wear early, and keep a signed record of every walk-around. For the car in the driveway and the trucks in the yard.</p>
         <p class="disclaimer"><svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg>Estimate. Verify with a gauge.</p>
         <div class="actions">
-          <!--
-  App Store badge slot. Apple requires its official badge artwork (Apple Marketing Tools,
-  https://tools.applemarketingtools.com/). Never redraw it. Save the official SVG as
-  site/assets/app-store-badge.svg and build.py uses it automatically once an app id is set.
--->
 
 <a class="btn btn-primary" href="https://apps.apple.com/app/id6839294842">View in the App Store</a>
 
@@ -130,18 +121,18 @@
       </div>
 
       <figure class="slab result" aria-labelledby="example-caption">
-        <figcaption id="example-caption" class="visually-hidden">Example scan result in the app: steer tire 1L on unit 104. Lowest scanned point 6 thirty-seconds, plus or minus 1, about 4.8 millimeters, wear band Watch. Outer groove 9, center 8, inner 6 thirty-seconds. FMCSA 393.75 guideline for steer tires is 4/32.</figcaption>
+        <figcaption id="example-caption" class="visually-hidden">Example reading in the app, entered from a tread gauge: steer tire 1L on unit 104. Lowest groove 6 thirty-seconds, about 4.8 millimeters, wear band Watch. Outer groove 9, center 8, inner 6 thirty-seconds. FMCSA 393.75 guideline for steer tires is 4/32.</figcaption>
         <div class="result-top" aria-hidden="true">
           <div class="result-where">
             <span class="plate">1L</span>
             <div><b>Steer, left</b><span>Unit 104, tractor 6x4</span></div>
           </div>
-          <span class="method-badge"><svg class="icon" aria-hidden="true"><use href="#i-depth"/></svg>Depth scan · TrueDepth</span>
+          <span class="method-badge"><svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg>Gauge entry</span>
         </div>
         <div class="result-readout" aria-hidden="true">
           <div>
-            <p class="label">Lowest scanned point</p>
-            <p class="reading" style="margin:0"><span class="n">6</span><span class="u">/32</span><span class="t">±1</span></p>
+            <p class="label">Lowest groove</p>
+            <p class="reading" style="margin:0"><span class="n">6</span><span class="u">/32</span></p>
             <p class="mm">About 4.8 mm</p>
           </div>
           <div class="verdict">
@@ -158,7 +149,6 @@
           <g fill="none" stroke="#F4F3F1" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
             <path d="M20 112q0-16 16-15.2L105 100M155 103l100 8M305 114l100 17M455 137l69 2.4q16 .6 16 16.6"/>
           </g>
-          <!-- Guidelines drawn inside the grooves only: 4/32 solid, 6/32 dashed (remaining depth above the floor). -->
           <g stroke="#F4F3F1" stroke-width="2.5">
             <path d="M105 156h50M255 156h50"/>
             <path d="M105 134h50M255 134h50" stroke-dasharray="6 4" stroke-width="2"/>
@@ -175,7 +165,6 @@
             <text x="559" y="141">6</text>
             <text x="559" y="163">4</text>
           </g>
-          <!-- Gauge pins drop into each groove. -->
           <g class="pin">
             <path d="M110 73.5h40M130 74v118" stroke="#050506" stroke-width="7" stroke-linecap="round"/>
             <path d="M110 73.5h40M130 74v118" stroke="#F4F3F1" stroke-width="3.5" stroke-linecap="round"/>
@@ -202,7 +191,6 @@
     </div>
   </section>
 
-  <!-- Problem, not alone, cost: real, sourced figures only (docs/store/research/facts.md). -->
   <section class="section" id="why" aria-labelledby="why-title">
     <div class="wrap">
       <div class="section-head">
@@ -272,7 +260,6 @@
     </div>
   </section>
 
-  <!-- Two paths: the same words the app uses in "What are you checking?" -->
   <section class="section" id="features" aria-labelledby="features-title">
     <div class="wrap">
       <div class="section-head">
@@ -328,13 +315,11 @@
                 <path d="M84 168h12M130 168h100M264 168h12"/>
                 <path d="M84 268h12M130 268h100M264 268h12"/>
               </g>
-              <!-- Axle 1 (steer) -->
               <rect x="96" y="20" width="34" height="56" rx="8" fill="url(#p-watch)" style="stroke:var(--watch-stroke)" stroke-width="1.5"/>
               <rect x="101" y="34" width="24" height="28" rx="5" style="fill:var(--watch-fill)"/>
               <text class="svg-num" x="113" y="58" text-anchor="middle" style="fill:var(--watch-on)">6</text>
               <rect x="230" y="20" width="34" height="56" rx="8" style="fill:var(--good-fill);stroke:var(--good-stroke)" stroke-width="1.5"/>
               <text class="svg-num" x="247" y="58" text-anchor="middle" style="fill:var(--good-on)">9</text>
-              <!-- Axle 2 (drive) -->
               <rect x="50" y="140" width="34" height="56" rx="8" style="fill:var(--good-fill);stroke:var(--good-stroke)" stroke-width="1.5"/>
               <text class="svg-num" x="67" y="178" text-anchor="middle" style="fill:var(--good-on)">11</text>
               <rect x="96" y="140" width="34" height="56" rx="8" style="fill:var(--good-fill);stroke:var(--good-stroke)" stroke-width="1.5"/>
@@ -344,7 +329,6 @@
               <rect x="276" y="140" width="34" height="56" rx="8" fill="url(#p-watch)" style="stroke:var(--watch-stroke)" stroke-width="1.5"/>
               <rect x="281" y="154" width="24" height="28" rx="5" style="fill:var(--watch-fill)"/>
               <text class="svg-num" x="293" y="178" text-anchor="middle" style="fill:var(--watch-on)">4</text>
-              <!-- Axle 3 (drive) -->
               <rect x="50" y="240" width="34" height="56" rx="8" style="fill:var(--good-fill);stroke:var(--good-stroke)" stroke-width="1.5"/>
               <text class="svg-num" x="67" y="278" text-anchor="middle" style="fill:var(--good-on)">12</text>
               <rect x="96" y="240" width="34" height="56" rx="8" style="fill:var(--stale-fill);stroke:var(--stale-stroke)" stroke-width="2" stroke-dasharray="5 4"/>
@@ -372,7 +356,7 @@
             <li><span class="well"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg></span><div><b>Tire map for every unit</b><span>Each wheel position shows its latest reading, with a history for every position.</span></div></li>
             <li><span class="well"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></span><div><b>Daily inspection report (DVIR)</b><span>Pre-trip and post-trip checklist built on the 49 CFR 396.11 list, a photo on every defect, signatures and a PDF. A record-keeping tool: keeping the records stays the carrier's job.</span></div></li>
             <li><span class="well"><svg class="icon" aria-hidden="true"><use href="#i-leak"/></svg></span><div><b>Leak flags with photos</b><span class="leak-line">Leak flagged — photo logged.</span> <span>Zone, size and photos, followed until it is repaired.</span></div></li>
-            <li><span class="well"><svg class="icon" aria-hidden="true"><use href="#i-seal"/></svg></span><div><b>Defects to repaired</b><span>Mark a defect repaired with a photo and the mechanic's name and signature.</span></div></li>
+            <li><span class="well"><svg class="icon" aria-hidden="true"><use href="#i-seal"/></svg></span><div><b>From defect to repaired</b><span>Mark a defect repaired with a photo and the mechanic's name and signature.</span></div></li>
             <li><span class="well"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><div><b>Guidelines with their source</b><span>FMCSA 393.75 guideline: 4/32 steer, 2/32 other positions.</span></div></li>
           </ul>
         </article>
@@ -380,7 +364,6 @@
     </div>
   </section>
 
-  <!-- How scanning works, with the honest device note. -->
   <section class="section" id="how" aria-labelledby="how-title">
     <div class="wrap">
       <div class="section-head">
@@ -441,7 +424,6 @@
     </div>
   </section>
 
-  <!-- Pricing: billed amount is the largest price text; no derived prices; trial terms smaller. -->
   <section class="section" id="pricing" aria-labelledby="pricing-title">
     <div class="wrap pricing-grid">
       <div class="slab pricing-head">
@@ -481,11 +463,6 @@
           <p class="legal">Payment is charged to your Apple Account. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the trial or the current period. Manage or cancel in your App Store account settings. The free trial is for new subscribers and can be used once across both plans. Prices are in US dollars; the App Store shows the price for your country before you confirm. See the <a href="terms.html">terms of use</a>.</p>
         </div>
         <div class="actions" style="margin-top:20px">
-          <!--
-  App Store badge slot. Apple requires its official badge artwork (Apple Marketing Tools,
-  https://tools.applemarketingtools.com/). Never redraw it. Save the official SVG as
-  site/assets/app-store-badge.svg and build.py uses it automatically once an app id is set.
--->
 
 <a class="btn btn-primary" href="https://apps.apple.com/app/id6839294842">View in the App Store</a>
 

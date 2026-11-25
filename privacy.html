@@ -29,11 +29,9 @@
 <script src="site.js" defer></script>
 </head>
 <body>
-<!-- Draft for legal review before publishing. Describes the v1.0 release build: docs/DECISIONS.md (2026-11-24 provisional defaults, 2026-11-25 RevenueCat) and docs/store/app-store-connect/app-privacy.md (section 5 lists what this page must state; revenuecat.md section 2 is the data inventory). -->
 <a class="skip-link" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- Band patterns (DIRECTION.md §3): Watch fine 45° hatch, Replace soon bold 135° stripes. -->
     <pattern id="p-watch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="6" height="6" style="fill:var(--watch-fill)"/>
       <rect width="1.6" height="6" style="fill:var(--watch-on);opacity:.3"/>
@@ -47,13 +45,11 @@
       <rect width="1.6" height="6" fill="#1C1300" opacity=".3"/>
     </pattern>
 
-    <!-- Band icons: circle, triangle, octagon, clock (ANSI sign shapes). --knock is the cut-out colour. -->
     <symbol id="i-good" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path d="M7.3 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-watch" viewBox="0 0 24 24"><path d="M10.3 3.2a2 2 0 0 1 3.4 0l9 15.6a2 2 0 0 1-1.7 3H3a2 2 0 0 1-1.7-3z" fill="currentColor"/><path d="M12 8.6v5.6" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.9" r="1.5" fill="var(--knock, #fff)"/></symbol>
     <symbol id="i-replace" viewBox="0 0 24 24"><path d="M8 1.5h8l6.5 6.5v8L16 22.5H8L1.5 16V8z" fill="currentColor"/><path d="M8.4 8.4l7.2 7.2M15.6 8.4l-7.2 7.2" stroke="var(--knock, #fff)" stroke-width="2.6" stroke-linecap="round"/></symbol>
     <symbol id="i-stale" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 6.8V12l3.6 2.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 
-    <!-- Line icons, 24 grid, 2 px stroke (set by .icon). -->
     <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="1.8" y="7.5" width="20.4" height="9" rx="2"/><path d="M5.5 7.5v3.2M8.8 7.5v2M12 7.5v3.2M15.2 7.5v2M18.5 7.5v3.2"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" fill="currentColor"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 3.5h12.5a1.5 1.5 0 0 1 1.5 1.5v14.5H6.5A1.5 1.5 0 0 1 5 18z"/><path d="M5 18a1.5 1.5 0 0 1 1.5-1.5H19M9 7.5h6"/></symbol>
@@ -132,7 +128,7 @@
           <li>your settings, including a company name and logo for PDF reports;</li>
           <li>the PDF reports and CSV files you create.</li>
         </ul>
-        <p>Depth scans are processed on your device. The app keeps the result of a scan, not the raw depth data, and never sends depth data or photos to us.</p>
+        <p>Depth scans are processed on your device. Depth data from the front (TrueDepth) or rear (LiDAR) camera is used only to measure tread depth. The app keeps the result of a scan, not the raw depth data. Depth data and photos are never sent to us or to any third party (RevenueCat included), and depth data is never used for advertising, marketing or data mining.</p>
 
         <h2>iCloud sync is not active yet</h2>
         <p>This version of the app does not sync. There is no iCloud copy and no server copy: your records stay on the device where you made them, and Settings shows them as saved on this device. Your subscription still works on every device signed in to the same Apple Account.</p>
@@ -157,7 +153,7 @@
         <p>If a later version adds a new permission (for example an optional location stamp on inspection records), the app will ask for it only when you first use that feature, and we will update this policy before that version is released.</p>
 
         <h2>What we receive</h2>
-        <p>The app sends no usage analytics anywhere and makes no network requests to servers we run. The one service it talks to is RevenueCat, to check your subscription (see "Subscriptions and RevenueCat" below). Through RevenueCat we can see subscription records under a random ID, and nothing else.</p>
+        <p>The app sends no usage analytics anywhere and makes no network requests to servers we run. The one service it talks to is RevenueCat, to check your subscription (see "Subscriptions and RevenueCat" below). Through RevenueCat we can see subscription records under a random ID, with the technical details listed below, and nothing else. Because the app and this website don't track you, they don't respond differently to browser Do Not Track signals.</p>
         <p>To help with troubleshooting, the app writes short app events (for example "scan completed" or "trial started") to your device's own system log. They carry only event names, choices and counts, stay on your device and are not sent to us. They never contain photos, names, notes or anything else you typed.</p>
         <p>If we add usage statistics in a later version, they will be anonymous counts that help us improve scanning (for example "scan completed" or "scan needed a retake"). They will not include your photos, readings, reports, names or location, will not be linked to you or used for advertising, and this policy and the App Store privacy details will be updated before that version is released.</p>
         <p>If you have chosen to share analytics with app developers in your device settings, Apple may give us crash reports and usage statistics in a form that does not identify you. You can turn this off in your device's privacy settings.</p>
@@ -167,7 +163,7 @@
 
         <h2>Subscriptions and RevenueCat</h2>
         <p>Apple handles every payment. We never see your card or other payment details.</p>
-        <p>We use RevenueCat, Inc., a subscription service provider, to check and restore your subscription and to manage our plans and prices. RevenueCat handles this data on our behalf, under its data processing terms with us.</p>
+        <p>We use RevenueCat, Inc., a subscription service provider, to check and restore your subscription and to manage our plans and prices. RevenueCat handles this data on our behalf, under its data processing terms with us. Those terms require RevenueCat to use the data only to provide its service to us and to protect it at least as well as this policy does.</p>
         <p>What RevenueCat receives from the app:</p>
         <ul>
           <li>a random ID the app creates on your device. It is not linked to your name, email address or Apple Account, and we don't ask for any of those;</li>
